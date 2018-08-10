@@ -1,7 +1,7 @@
 FROM golang:1.10
 
 RUN curl -L -o /bin/dep https://github.com/golang/dep/releases/download/v0.4.1/dep-linux-amd64 && chmod +x /bin/dep
-RUN go get -u github.com/alecthomas/gometalinter github.com/vektah/gorunpkg
+RUN go get -u github.com/alecthomas/gometalinter github.com/vektah/gorunpkg github.com/mattn/goveralls
 RUN gometalinter --install
 
 WORKDIR /go/src/github.com/99designs/gqlgen

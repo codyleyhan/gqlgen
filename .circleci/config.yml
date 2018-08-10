@@ -16,7 +16,7 @@ jobs:
 
       - run:
           name: "golang tests"
-          command: docker run --rm gqlgen/golang .circleci/test.sh
+          command: docker run -e COVERALLS_TOKEN=$COVERALLS_TOKEN --rm gqlgen/golang .circleci/test.sh
 
       - run:
           name: "integration tests"
