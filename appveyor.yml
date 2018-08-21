@@ -35,3 +35,11 @@ test_script:
   - dep ensure -vendor-only
   - go generate ./...
   - go test -timeout 20m ./...
+
+  - echo "testing init"
+  - go install
+  - go get github.com/vektah/gqlparser github.com/gorilla/websocket github.com/agnivade/levenshtein
+  - cd c:\gopath\src\github.com\99designs\
+  - mkdir init-project
+  - cd init-project
+  - gqlgen init
